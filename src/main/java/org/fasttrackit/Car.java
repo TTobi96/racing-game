@@ -1,16 +1,8 @@
 package org.fasttrackit;
+// "is a" relationship or inheritence
+public class Car extends AutoVehicle {
 
-public class Car {
+    int doorCount;
 
-    //instance variables
-    int racingNumber;
-    String name;
-    int maxSpeed;
-    double mileage;
-    String color;
-    double fuelLevel;
-    boolean damaged;
-    // "has-a" relationship/ Aggregation
-    Engine engine;
 
 }
