@@ -63,7 +63,9 @@ public class App
         System.out.println("Damaged is " +car2.damaged);
         System.out.println("Color is " + car2.color);
 
-
+//        System.out.println(4 % 2==0);
+//        System.out.println(4 % 2);
+//        System.out.println(4 % 3);
 
     }
 }
