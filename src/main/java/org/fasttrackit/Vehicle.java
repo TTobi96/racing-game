@@ -15,9 +15,22 @@ public class Vehicle
 
     public double accelerate(double speed, double durationInHours)
     {
+        if(fuelLevel<=0)
+        {
+            System.out.println("Not enough fuel");
+            return 0;
+        }
+        if(speed> maxSpeed) {
+            System.out.println(name + "is accelerating with" + speed + "in km / h " + durationInHours + "h");
+            return 0;
+        }
+        else if(speed==maxSpeed){
+            System.out.println("Carefull ! Max speed reached!");
 
-        System.out.println(name + "is accelerating with" + speed + "in km / h " + durationInHours + "h");
-
+        }
+        else
+            System.out.println("Valid speed entered");
+        //todo use more fuel if speed > 120
         //local variables
         double travelDistance = speed * durationInHours;
 
