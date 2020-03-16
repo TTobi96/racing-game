@@ -34,35 +34,37 @@ public class App
 //
 //        System.out.println("Ilona jo rucah");
 //
-//        Engine engine1 = new Engine();
-//        engine1.manufacturer = "VW";
-//
-//        engine1.capacity = 2000;
-//        Car carReference = new Car(engine1);
-//        carReference.name = "AUDI";
-//        carReference.color = "RED";
-//        carReference.maxSpeed = 260;
-//        carReference.mileage = 6.2;
-//        carReference.fuelLevel = 100;
-//        carReference.damaged = true;
-//
-//
-////        carReference.engine = new Engine();
-////        carReference.engine.manufacturer = "VW";
-////        carReference.engine.capacity = 2000;
-//
-//
-//
-//
-//        double currentDistance = carReference.accelerate(60, 1);
-//
-//        System.out.println("current distance" + currentDistance);
-//
-//        Mechanic mechanic = new Mechanic();
-//        mechanic.repair(carReference);
-//
-//        System.out.println("is car damaged " + carReference.damaged);
-//
+        Engine engine1 = new Engine();
+        engine1.manufacturer = "VW";
+
+        engine1.capacity = 2000;
+        Car carReference = new Car(engine1);
+        carReference.setName("Audi");
+        carReference.setColor("Red");
+        carReference.setMaxSpeed(260);
+        carReference.setMileage(6.2);
+        carReference.setFuelLevel(100);
+        carReference.setDamaged(true);
+
+        System.out.println("Name" + carReference.getName());
+
+
+//        carReference.engine = new Engine();
+//        carReference.engine.manufacturer = "VW";
+//        carReference.engine.capacity = 2000;
+
+
+
+
+        double currentDistance = carReference.accelerate(60, 1);
+
+        System.out.println("current distance" + currentDistance);
+
+        Mechanic mechanic = new Mechanic();
+        mechanic.repair(carReference);
+
+        System.out.println("is car damaged " + carReference.isDamaged());
+
 //        System.out.println("Engine details:");
 //        System.out.println(engine1.capacity);
 //        System.out.println(carReference.engine.capacity);
