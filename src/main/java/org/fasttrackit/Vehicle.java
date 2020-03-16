@@ -3,8 +3,12 @@ package org.fasttrackit;
 import com.sun.org.apache.bcel.internal.generic.PUSH;
 
 public class Vehicle {
+    public static int getTotalVehicleCount() {
+        return totalVehicleCount;
+    }
+
     //static variables ( class variables)
-    static int totalVehicleCount;
+    private static int totalVehicleCount;
 
     //instance variables
     private int racingNumber;
