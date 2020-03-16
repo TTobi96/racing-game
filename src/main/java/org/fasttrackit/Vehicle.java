@@ -30,7 +30,10 @@ public class Vehicle
         }
         else
             System.out.println("Valid speed entered");
-        //todo use more fuel if speed > 120
+        double mileageMultiplier = 1;
+        if (speed > 120) {
+            mileageMultiplier = speed / 100;
+        }
         //local variables
         double travelDistance = speed * durationInHours;
 
@@ -42,7 +45,7 @@ public class Vehicle
 
 
         double usedFuel = travelDistance * mileage / 100 ;
-
+        usedFuel *= mileageMultiplier;
         fuelLevel = fuelLevel - usedFuel;
 
 //        fuelLevel -= usedFuel;
