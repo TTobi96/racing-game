@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import com.sun.org.apache.bcel.internal.generic.PUSH;
+
 public class Vehicle {
     //static variables ( class variables)
     static int totalVehicleCount;
@@ -17,6 +19,11 @@ public class Vehicle {
 
     public Vehicle() {
         totalVehicleCount++;
+    }
+
+    //method overloading
+    public double accelerate(double speed) {
+        return accelerate(speed, 1);
     }
 
     public double accelerate(double speed, double durationInHours) {
