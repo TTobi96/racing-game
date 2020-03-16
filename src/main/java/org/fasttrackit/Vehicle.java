@@ -1,7 +1,9 @@
 package org.fasttrackit;
 
-public class Vehicle
-{
+public class Vehicle {
+    //static variables ( class variables)
+    static int totalVehicleCount;
+
     //instance variables
     int racingNumber;
     String name;
@@ -13,22 +15,22 @@ public class Vehicle
     boolean damaged;
 
 
-    public double accelerate(double speed, double durationInHours)
-    {
-        if(fuelLevel<=0)
-        {
+    public Vehicle() {
+        totalVehicleCount++;
+    }
+
+    public double accelerate(double speed, double durationInHours) {
+        if (fuelLevel <= 0) {
             System.out.println("Not enough fuel");
             return 0;
         }
-        if(speed> maxSpeed) {
+        if (speed > maxSpeed) {
             System.out.println(name + "is accelerating with" + speed + "in km / h " + durationInHours + "h");
             return 0;
-        }
-        else if(speed==maxSpeed){
+        } else if (speed == maxSpeed) {
             System.out.println("Carefull ! Max speed reached!");
 
-        }
-        else
+        } else
             System.out.println("Valid speed entered");
         double mileageMultiplier = 1;
         if (speed > 120) {
@@ -43,8 +45,7 @@ public class Vehicle
         System.out.println("Total traveled distance" + totalDistance);
 
 
-
-        double usedFuel = travelDistance * mileage / 100 ;
+        double usedFuel = travelDistance * mileage / 100;
         usedFuel *= mileageMultiplier;
         fuelLevel = fuelLevel - usedFuel;
 
@@ -54,7 +55,8 @@ public class Vehicle
 
         return travelDistance;
     }
-    public void decelerate(){
+
+    public void decelerate() {
         //TODO :implement this
         System.out.println("This is just a demo method");
 
