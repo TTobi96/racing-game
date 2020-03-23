@@ -1,6 +1,5 @@
 package org.fasttrackit;
 
-import com.sun.org.apache.bcel.internal.generic.PUSH;
 
 public class Vehicle {
     public static int getTotalVehicleCount() {

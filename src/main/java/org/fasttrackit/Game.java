@@ -14,6 +14,8 @@ public class Game {
 
         initializeTracks();
         displayTracks();
+        Track selectedTrack = getSelectedTrackFromUser();
+        System.out.println("Selected track" + selectedTrack.getName());
 
 
     }
@@ -44,6 +46,13 @@ public class Game {
             }
 
         }
+    }
+
+    private Track getSelectedTrackFromUser(){
+        System.out.println("please select a track");
+        Scanner scanner = new Scanner(System.in);
+        int trackNumber = scanner.nextInt();
+        return tracks[trackNumber - 1];
     }
 
     private String getVehicleNameFromUser(){
