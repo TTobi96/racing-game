@@ -8,7 +8,7 @@ public class Vehicle {
     }
 
     //static variables ( class variables)
-    private static int totalVehicleCount;
+     static int totalVehicleCount;
 
     //instance variables
     private int racingNumber;
@@ -71,10 +71,11 @@ public class Vehicle {
         //TODO :implement this
         System.out.println("This is just a demo method");
 
-        //co-variant return type
-        protected Vehicle clone(){
-            return new Vehicle();
+
         }
+    //co-variant return type
+    protected Vehicle clone(){
+        return new Vehicle();
     }
     //write only
     public void setName(String name){

@@ -10,13 +10,13 @@ public class App
 
     public static void main(String[] args)
     {
-//        Game game = new Game();
- //       game.start();
+        Game game = new Game();
+        game.start();
         //method implementation taken from objects class , not from variables class
         Vehicle cheater = new CheatingVehicle();
         cheater.setName("Cheater");
 
-        cheater.accelerate(60 1) //nu este duration in hours
+        cheater.accelerate(60, 1);
 
         System.out.println("Total distance" + cheater.getTotalDistance());
 
@@ -26,7 +26,7 @@ public class App
 
 
         Vehicle vehicle1 = new Vehicle();
-        vehicle1.totalVehicleCount = 1;
+  //      vehicle1.totalVehicleCount = 1;
 
         Vehicle vehicle2 = new Vehicle();
         vehicle2.totalVehicleCount = 2;
