@@ -13,6 +13,13 @@ public class App
 //        Game game = new Game();
  //       game.start();
 
+        CheatingVehicle cheater = CheatingVehicle();
+        cheater.setName("Cheater");
+
+        cheater.accelerate(60 1) //nu este duration in hours
+
+        System.out.println("Total distance" + cheater.getTotalDistance());
+
         Vehicle vehicle1 = new Vehicle();
         vehicle1.totalVehicleCount = 1;
 

@@ -71,6 +71,10 @@ public class Vehicle {
         //TODO :implement this
         System.out.println("This is just a demo method");
 
+        //co-variant return type
+        protected Vehicle clone(){
+            return new Vehicle();
+        }
     }
     //write only
     public void setName(String name){
@@ -135,6 +139,20 @@ public class Vehicle {
 
     public void setDamaged(boolean damaged) {
         this.damaged = damaged;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "racingNumber=" + racingNumber +
+                ", name='" + name + '\'' +
+                ", maxSpeed=" + maxSpeed +
+                ", mileage=" + mileage +
+                ", color='" + color + '\'' +
+                ", fuelLevel=" + fuelLevel +
+                ", totalDistance=" + totalDistance +
+                ", damaged=" + damaged +
+                '}';
     }
 }
 
