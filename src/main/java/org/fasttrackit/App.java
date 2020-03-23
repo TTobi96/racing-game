@@ -10,32 +10,34 @@ public class App
 
     public static void main(String[] args)
     {
-        Game game = new Game();
-        game.start();
+        //Game game = new Game();
+        //game.start();
+
+
         //method implementation taken from objects class , not from variables class
-        Vehicle cheater = new CheatingVehicle();
-        cheater.setName("Cheater");
-
-        cheater.accelerate(60, 1);
-
-        System.out.println("Total distance" + cheater.getTotalDistance());
-
-       // variable type decided what methods can be invoked
+//        Vehicle cheater = new CheatingVehicle();
+//        cheater.setName("Cheater");
+//
+//        cheater.accelerate(60, 1);
+//
+//        System.out.println("Total distance" + cheater.getTotalDistance());
+//
+//        variable type decided what methods can be invoked
         //type casting
-        ((CheatingVehicle) cheater).fly();
+//        ((CheatingVehicle) cheater).fly();
 
 
-        Vehicle vehicle1 = new Vehicle();
-  //      vehicle1.totalVehicleCount = 1;
-
-        Vehicle vehicle2 = new Vehicle();
-        vehicle2.totalVehicleCount = 2;
-
-        Vehicle.totalVehicleCount = 50;
-
-        System.out.println("total count from vehicle1=" + vehicle1.totalVehicleCount);
-        System.out.println("total count from vehicle2=" + vehicle2.totalVehicleCount);
-        System.out.println("total count from vehicle class=" + Vehicle.totalVehicleCount);
+//        Vehicle vehicle1 = new Vehicle();
+//  //      vehicle1.totalVehicleCount = 1;
+//
+//        Vehicle vehicle2 = new Vehicle();
+//        vehicle2.totalVehicleCount = 2;
+//
+//        Vehicle.totalVehicleCount = 50;
+//
+//        System.out.println("total count from vehicle1=" + vehicle1.totalVehicleCount);
+//        System.out.println("total count from vehicle2=" + vehicle2.totalVehicleCount);
+//        System.out.println("total count from vehicle class=" + Vehicle.totalVehicleCount);
 
 //        System.out.println("please enter vehicle name");
 //        Scanner scanner = new Scanner(System.in);
@@ -46,36 +48,36 @@ public class App
 //
 //        System.out.println("Ilona jo rucah");
 //
-        Engine engine1 = new Engine();
-        engine1.manufacturer = "VW";
-
-        engine1.capacity = 2000;
-        Car carReference = new Car(engine1);
-        carReference.setName("Audi");
-        carReference.setColor("Red");
-        carReference.setMaxSpeed(260);
-        carReference.setMileage(6.2);
-        carReference.setFuelLevel(100);
-        carReference.setDamaged(true);
-
-        System.out.println("Name" + carReference.getName());
-
-
-//        carReference.engine = new Engine();
-//        carReference.engine.manufacturer = "VW";
-//        carReference.engine.capacity = 2000;
-
-
-
-
-        double currentDistance = carReference.accelerate(60, 1);
-
-        System.out.println("current distance" + currentDistance);
-
-        Mechanic mechanic = new Mechanic();
-        mechanic.repair(carReference);
-
-        System.out.println("is car damaged " + carReference.isDamaged());
+//        Engine engine1 = new Engine();
+//        engine1.manufacturer = "VW";
+//
+//        engine1.capacity = 2000;
+//        Car carReference = new Car(engine1);
+//        carReference.setName("Audi");
+//        carReference.setColor("Red");
+//        carReference.setMaxSpeed(260);
+//        carReference.setMileage(6.2);
+//        carReference.setFuelLevel(100);
+//        carReference.setDamaged(true);
+//
+//        System.out.println("Name" + carReference.getName());
+//
+//
+////        carReference.engine = new Engine();
+////        carReference.engine.manufacturer = "VW";
+////        carReference.engine.capacity = 2000;
+//
+//
+//
+//
+//        double currentDistance = carReference.accelerate(60, 1);
+//
+//        System.out.println("current distance" + currentDistance);
+//
+//        Mechanic mechanic = new Mechanic();
+//        mechanic.repair(carReference);
+//
+//        System.out.println("is car damaged " + carReference.isDamaged());
 
 //        System.out.println("Engine details:");
 //        System.out.println(engine1.capacity);
