@@ -15,4 +15,8 @@ public class CheatingVehicle extends Vehicle {
     public CheatingVehicle clone(){
         return new CheatingVehicle();
     }
+    public void fly(){
+        System.out.println("Flying");
+
+    }
 }
