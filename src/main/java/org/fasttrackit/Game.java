@@ -34,7 +34,7 @@ public class Game {
     }
 
 
-    private void playOneRound(){
+    private void playOneRound() {
         System.out.println("\nNew round");
 
         //inhanced for
@@ -43,16 +43,17 @@ public class Game {
 
             double speed = getAccelerationSpeedFromUser();
             vehicle.accelerate(speed);
-            if (selectedTrack.getLength() <= vehicle.getTotalDistance())
+            if (selectedTrack.getLength() <= vehicle.getTotalDistance()) {
                 System.out.println("Selected winner is " + vehicle.getName());
-            winnerNotKnown = false;
+                winnerNotKnown = false;
 
-            break;
-        }
+                break;
+            }
 
             System.out.println();
 
         }
+    }
 
 
     private void initializeCompetitors() {
