@@ -11,7 +11,7 @@ public class Game {
     private Track[] tracks = new Track[3];
     private List<Vehicle> competitors = new ArrayList<>();
 
-    public void start(){
+    public void start() throws Exception {
         System.out.println("Welcome");
         initializeTracks();
         displayTracks();
@@ -29,7 +29,7 @@ public class Game {
         for (Vehicle vehicle : competitors){
             System.out.println("It's" + vehicle.getName() + "'s turn");
 
-            double speed = getAccelationSpeedFromUser();
+            double speed = getAccelerationSpeedFromUser();
             vehicle.accelerate(speed);
 
             System.out.println();
@@ -83,7 +83,7 @@ public class Game {
         }
     }
 
-    private Track getSelectedTrackFromUser(){ throws Exception {
+    private Track getSelectedTrackFromUser() throws Exception {
         System.out.println("please select a track");
         try {
 
@@ -101,7 +101,6 @@ public class Game {
         }
         }
 
-    }
 
     private String getVehicleNameFromUser(){
         System.out.println("Please enter vehicle name= ");
@@ -113,9 +112,17 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
-    private double getAccelationSpeedFromUser(){
+    private double getAccelerationSpeedFromUser(){
         System.out.println("Please enter acceleration speed");
         Scanner scanner = new Scanner(System.in);
-        return scanner.nextDouble();
+
+        try {
+            return scanner.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("you have entered an invalid value");
+            //recursion
+            return getAccelerationSpeedFromUser();
+
+        }
     }
 }
