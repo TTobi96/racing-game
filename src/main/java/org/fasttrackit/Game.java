@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import org.fasttrackit.utils.ScannerUtils;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -106,9 +108,7 @@ public class Game {
         System.out.println("please select a track");
         try {
 
-
-            Scanner scanner = new Scanner(System.in);
-            int trackNumber = scanner.nextInt();
+            int trackNumber = ScannerUtils.nextSingleInt;
             return tracks[trackNumber - 1];
         }catch (InputMismatchException e ) {
             throw new Exception("Please enter a number");
